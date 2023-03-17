@@ -2,38 +2,41 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-font-smoonthing: antialiased;
-  -moz-osx-font-smoonthing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
-  font-size: 62.5%
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
 }
 
 body {
   font-size: 1.6rem;
-  font-family: 'Lato', sans-serif;
-} 
+}
 
 main {
   background: url(./assets/bg.jpg) no-repeat center/cover;
+
   min-height: 100vh;
+
   display: grid;
   place-content: center;
+
+  padding: 6.4rem;
+  gap: 2.4rem;
 }
 
 section {
-  background: #6d67d8;
+  background: #6d67d0;
   backdrop-filter: blur(1rem);
-  -webkit-backdrop-filter: blur(1rem);
   border-radius: 1rem;
 }
 
 .temperature-now {
   background: url(./assets/bg-temp-now.jpg);
-  height: 48rem;
-  width: 48rem;
   position: relative;
+
   display: grid;
   grid-template-rows: max-content 1fr max-content;
 }
@@ -42,7 +45,9 @@ section {
   content: "";
   width: 17.6rem;
   height: 17.6rem;
+
   background: url(./assets/cloud.svg) no-repeat;
+
   position: absolute;
   top: -5.6rem;
   left: -5.6rem;
@@ -50,22 +55,24 @@ section {
 
 .location {
   justify-self: end;
+
   padding: 3.2rem 3.2rem 0;
+
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  color: #c2bff4;
-  font-size: 1.4rem;
 }
 
 .location strong {
-  color: #c2bff4;
   font-size: 1.4rem;
+  color: #c2bff4;
 }
 
 .temp {
   margin: 6rem;
+
   font-weight: 700;
+
   display: flex;
   justify-content: center;
   gap: 0.4rem;
@@ -74,7 +81,8 @@ section {
 .temp .number {
   text-align: center;
   font-size: 8.8rem;
-  color: #ffffff;
+  color: white;
+
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -82,7 +90,6 @@ section {
 
 .temp .number .maxmin {
   font-size: 2rem;
-  color: #ffffff;
 }
 
 .temp .number .maxmin span {
@@ -92,6 +99,7 @@ section {
 .celsius {
   font-size: 2.4rem;
   color: #dad8f7;
+
   margin-top: 1.5rem;
 }
 
@@ -107,15 +115,16 @@ section {
   background: rgba(102, 96, 200, 0.6);
   border-radius: 0.6rem;
   display: flex;
-  align-items: center;
   gap: 1.2rem;
+  align-items: center;
 }
 
 .stats .info {
   color: #e7e6fb;
 }
 
-.stats .info h5 span, .stats .info p {
+.stats h5 span,
+.stats .info p {
   font-size: 1.2rem;
 }
 
@@ -124,4 +133,33 @@ section {
   display: flex;
   align-items: baseline;
   gap: 0.4rem;
+}
+
+
+.air-quality {
+  font-weight: 700;
+  text-align: center;
+  display: grid;
+}
+
+h2.title {
+  font-size: 1.6rem;
+  color: #dad8f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 3.2rem;
+}
+
+.air-quality .good {
+  margin-top: 3.2rem;
+  font-size: 1.8rem;
+  color: #87ebcd;
+}
+
+.air-quality .number {
+  margin-top: 0.4rem;
+  font-size: 4rem;
+  color: #e7e6fb;
 }
